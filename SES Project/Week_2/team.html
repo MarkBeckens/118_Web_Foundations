@@ -1,115 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+    <head>
+        <meta charset="UTF-8">
 
-    <!-- The title that appears in the browser tab -->
-    <title>SES — Team</title>
+        <!-- The title that appears in the browser tab -->
+        <title>SES — Team</title>
 
-    <!-- Links this page to your external CSS file -->
-    <link rel="stylesheet" href="style.css">
-</head>
+        <!-- Links this page to your external CSS file -->
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
+    <body>
 
-    <!-- 
-        HEADER SECTION
-        This container holds the large SES baseball banner image.
-        The height is controlled in CSS (.team-header).
-        The image fills the container using object-fit: cover.
-    -->
-    <div class="team-header">
-        <img src="../assets/Baseball-header.png" 
-             alt="Team Header" 
-             class="team-header-img">
-    </div>
-
-    <!-- 
-        NAVIGATION MENU
-        Positioned over the header image using absolute positioning.
-        Each link uses the .nav-box style for the rounded buttons.
-    -->
-    <div class="nav-container">
-        <a href="index.html" class="nav-box">Home</a>
-        <a href="about.html" class="nav-box">About</a>
-        <a href="team.html" class="nav-box">Team</a>
-    </div>
-
-    <!-- 
-        MAIN BODY SECTION
-        This is the blue background area under the header.
-        It expands to fit the full table height.
-    -->
-    <div class="team-body">
-
-        <!-- 
-            CONTENT BOX
-            This semi-transparent box holds the page title and the table.
-            It has padding, rounded corners, and a blur effect.
+         <!--   HEADER SECTION
+            This container holds the large SES baseball banner image.
+            The height is controlled in CSS (.team-header).
+            The image fills the container using object-fit: cover.
         -->
-        <div class="team-content">
-
-            <!-- Page Title -->
-            <h1>Team Financials</h1>
-
-            <!-- 
-                TEAM FINANCIAL TABLE
-                Displays each MLB team with revenue, payroll, and SES payroll.
-                The table styling (colors, hover effect, borders) is controlled in CSS.
-            -->
-            <table class="team-table">
-
-                <!-- Table Header Row -->
-                <thead>
-                    <tr>
-                        <th>Team</th>
-                        <th>2025 Revenue</th>
-                        <th>2025 Payroll</th>
-                        <th>SES Payroll (50%)</th>
-                    </tr>
-                </thead>
-
-                <!-- 
-                    TABLE BODY
-                    Alphabetized list of all teams.
-                    Each row contains: Team Name, Revenue, Payroll, SES Payroll.
-                -->
-                <tbody>
-                    <tr><td>Arizona Diamondbacks</td><td>$328M</td><td>$219M</td><td>$164M</td></tr>
-                    <tr><td>Atlanta Braves</td><td>$510M</td><td>$235M</td><td>$255M</td></tr>
-                    <tr><td>Baltimore Orioles</td><td>$366M</td><td>$183M</td><td>$183M</td></tr>
-                    <tr><td>Boston Red Sox</td><td>$574M</td><td>$242M</td><td>$287M</td></tr>
-                    <tr><td>Chicago Cubs</td><td>$584M</td><td>$213M</td><td>$292M</td></tr>
-                    <tr><td>Chicago White Sox</td><td>$277M</td><td>$87M</td><td>$138.5M</td></tr>
-                    <tr><td>Cincinnati Reds</td><td>$325M</td><td>$139M</td><td>$162.5M</td></tr>
-                    <tr><td>Cleveland Guardians</td><td>$336M</td><td>$132M</td><td>$168M</td></tr>
-                    <tr><td>Colorado Rockies</td><td>$318M</td><td>$142M</td><td>$159M</td></tr>
-                    <tr><td>Detroit Tigers</td><td>$320M</td><td>$158M</td><td>$160M</td></tr>
-                    <tr><td>Houston Astros</td><td>$494M</td><td>$239M</td><td>$247M</td></tr>
-                    <tr><td>Kansas City Royals</td><td>$324M</td><td>$167M</td><td>$162M</td></tr>
-                    <tr><td>LA Angels</td><td>$410M</td><td>$215M</td><td>$205M</td></tr>
-                    <tr><td>LA Dodgers</td><td>$752M</td><td>$549M</td><td>$376M</td></tr>
-                    <tr><td>Miami Marlins</td><td>$317M</td><td>$86M</td><td>$158.5M</td></tr>
-                    <tr><td>Minnesota Twins</td><td>$324M</td><td>$154M</td><td>$162M</td></tr>
-                    <tr><td>NY Mets</td><td>$444M</td><td>$400M</td><td>$222M</td></tr>
-                    <tr><td>NY Yankees</td><td>$728M</td><td>$358M</td><td>$364M</td></tr>
-                    <tr><td>Oakland Athletics</td><td>$257M</td><td>$111M</td><td>$128.5M</td></tr>
-                    <tr><td>Philadelphia Phillies</td><td>$519M</td><td>$349M</td><td>$259.5M</td></tr>
-                    <tr><td>Pittsburgh Pirates</td><td>$326M</td><td>$112M</td><td>$163M</td></tr>
-                    <tr><td>San Diego Padres</td><td>$432M</td><td>$275M</td><td>$216M</td></tr>
-                    <tr><td>San Francisco Giants</td><td>$448M</td><td>$213M</td><td>$224M</td></tr>
-                    <tr><td>Seattle Mariners</td><td>$379M</td><td>$175M</td><td>$189.5M</td></tr>
-                    <tr><td>St. Louis Cardinals</td><td>$373M</td><td>$160M</td><td>$186.5M</td></tr>
-                    <tr><td>Tampa Bay Rays</td><td>$297M</td><td>$100M</td><td>$148.5M</td></tr>
-                    <tr><td>Texas Rangers</td><td>$406M</td><td>$232M</td><td>$203M</td></tr>
-                    <tr><td>Toronto Blue Jays</td><td>$387M</td><td>$277M</td><td>$193.5M</td></tr>
-                    <tr><td>Washington Nationals</td><td>$325M</td><td>$137M</td><td>$162.5M</td></tr>
-                </tbody>
-
-            </table>
-
+        <div class="team-header">
+            <img src="../assets/Baseball-header.png" alt="Team Header" class="team-header-img">
         </div>
-    </div>
 
-</body>
+        <!-- NAVIGATION MENU
+            Positioned over the header image using absolute positioning.
+            Each link uses the .nav-box style for the rounded buttons.
+        -->
+        
+        <div class="nav-container">
+            <a href="index.html" class="nav-box">Home</a>
+            <a href="about.html" class="nav-box">About</a>
+            <a href="team.html" class="nav-box">Team</a>
+        </div>
+
+        <!-- MAIN BODY SECTION
+            This is the blue background area under the header.
+            It expands to fit the full table height.
+        -->
+        <div class="team-body">
+
+            <!--  CONTENT BOX
+                This semi-transparent box holds the page title and the table.
+                It has padding, rounded corners, and a blur effect.
+            -->
+            
+            <div class="team-content">
+
+                 <!-- Page Title -->
+                <h1>Team Financials</h1>
+
+                <!--  TEAM FINANCIAL TABLE
+                     Displays each MLB team with revenue, payroll, and SES payroll.
+                    The table styling (colors, hover effect, borders) is controlled in CSS.
+                -->
+                <table class="team-table">
+
+                    <!-- Table Header Row -->
+                    <thead>
+                        <tr>
+                             <th>Team</th>
+                             <th>2025 Revenue</th>
+                             <th>2025 Payroll</th>
+                             <th>SES Payroll (50%)</th>
+                        </tr>
+                    </thead>
+
+                    <!--  TABLE BODY
+                        Alphabetized list of all teams.
+                        Each row contains: Team Name, Revenue, Payroll, SES Payroll.
+                    -->
+                    <tbody>
+                        <tr><td>Arizona Diamondbacks</td><td>$328M</td><td>$219M</td><td>$164M</td></tr>
+                        <tr><td>Atlanta Braves</td><td>$510M</td><td>$235M</td><td>$255M</td></tr>
+                        <tr><td>Baltimore Orioles</td><td>$366M</td><td>$183M</td><td>$183M</td></tr>
+                        <tr><td>Boston Red Sox</td><td>$574M</td><td>$242M</td><td>$287M</td></tr>
+                        <tr><td>Chicago Cubs</td><td>$584M</td><td>$213M</td><td>$292M</td></tr>
+                        <tr><td>Chicago White Sox</td><td>$277M</td><td>$87M</td><td>$138.5M</td></tr>
+                        <tr><td>Cincinnati Reds</td><td>$325M</td><td>$139M</td><td>$162.5M</td></tr>
+                        <tr><td>Cleveland Guardians</td><td>$336M</td><td>$132M</td><td>$168M</td></tr>
+                        <tr><td>Colorado Rockies</td><td>$318M</td><td>$142M</td><td>$159M</td></tr>
+                        <tr><td>Detroit Tigers</td><td>$320M</td><td>$158M</td><td>$160M</td></tr>
+                        <tr><td>Houston Astros</td><td>$494M</td><td>$239M</td><td>$247M</td></tr>
+                        <tr><td>Kansas City Royals</td><td>$324M</td><td>$167M</td><td>$162M</td></tr>
+                        <tr><td>LA Angels</td><td>$410M</td><td>$215M</td><td>$205M</td></tr>
+                        <tr><td>LA Dodgers</td><td>$752M</td><td>$549M</td><td>$376M</td></tr>
+                        <tr><td>Miami Marlins</td><td>$317M</td><td>$86M</td><td>$158.5M</td></tr>
+                        <tr><td>Minnesota Twins</td><td>$324M</td><td>$154M</td><td>$162M</td></tr>
+                        <tr><td>NY Mets</td><td>$444M</td><td>$400M</td><td>$222M</td></tr>
+                        <tr><td>NY Yankees</td><td>$728M</td><td>$358M</td><td>$364M</td></tr>
+                        <tr><td>Oakland Athletics</td><td>$257M</td><td>$111M</td><td>$128.5M</td></tr>
+                        <tr><td>Philadelphia Phillies</td><td>$519M</td><td>$349M</td><td>$259.5M</td></tr>
+                        <tr><td>Pittsburgh Pirates</td><td>$326M</td><td>$112M</td><td>$163M</td></tr>
+                        <tr><td>San Diego Padres</td><td>$432M</td><td>$275M</td><td>$216M</td></tr>
+                        <tr><td>San Francisco Giants</td><td>$448M</td><td>$213M</td><td>$224M</td></tr>
+                        <tr><td>Seattle Mariners</td><td>$379M</td><td>$175M</td><td>$189.5M</td></tr>
+                        <tr><td>St. Louis Cardinals</td><td>$373M</td><td>$160M</td><td>$186.5M</td></tr>
+                        <tr><td>Tampa Bay Rays</td><td>$297M</td><td>$100M</td><td>$148.5M</td></tr>
+                        <tr><td>Texas Rangers</td><td>$406M</td><td>$232M</td><td>$203M</td></tr>
+                        <tr><td>Toronto Blue Jays</td><td>$387M</td><td>$277M</td><td>$193.5M</td></tr>
+                        <tr><td>Washington Nationals</td><td>$325M</td><td>$137M</td><td>$162.5M</td></tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+
+    </body>
 </html>

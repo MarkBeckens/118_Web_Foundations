@@ -46,9 +46,7 @@ This version is intentionally simple and unstyled, matching the Week 1 expectati
 ## Reflection
 
 This version is imperfect, which is exactly what the assignment said to expect. The biggest 
-challenge was how large the images appeared without CSS. On the Team page, the header image 
-pushed the content far down the page, making it look like only one team was showing at first. 
-After scrolling, I confirmed the rest of the list was there.
+challenge was how large the images appeared without CSS. 
 
 Building the pages themselves was straightforward. Adding navigation helped me understand how 
 HTML pages connect, and using headings, paragraphs, and lists reinforced the basics of semantic 
