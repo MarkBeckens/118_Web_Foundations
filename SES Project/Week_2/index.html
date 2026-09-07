@@ -1,32 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>SES Home</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
 
-    <body>
-                <!-- First image (header image) -->
-   <header class="header-container">
-    <img src="assets/Baseball-header.png" alt="SES Header Image">
-</header>
+    <!-- Ensures the page scales correctly on phones and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<nav class="nav-container">
-    <a href="index.html">Home</a>
-    <a href="about.html">About SES</a>
-    <a href="team.html">SES Module</a>
-</nav>
+    <!-- Title shown in the browser tab -->
+    <title>SES — Home</title>
 
-<main class="body-container">
-    <img src="assets/watermark1.png" alt="SES Body Image">
-</main>
+    <!-- Connects this page to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
 
-        
-    </body>
+<body>
+
+    <!-- 
+        FULL-PAGE BACKGROUND IMAGE
+        This image fills the entire screen using the .fullpage class.
+        It acts as the main visual background for the home page.
+    -->
+    <img src="../assets/watermark1.png" class="fullpage">
+
+    <!-- 
+        NAVIGATION MENU
+        These buttons let the user move between the three pages.
+        The nav-container positions the buttons in the top-left corner.
+        Each link uses .nav-box for styling (rounded, colored buttons).
+    -->
+    <div class="nav-container">
+        <a href="index.html" class="nav-box">Home</a>
+        <a href="about.html" class="nav-box">About</a>
+        <a href="team.html" class="nav-box">Team</a>
+    </div>
+
+</body>
 </html>
-
-
-
-
-

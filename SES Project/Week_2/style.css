@@ -1,0 +1,175 @@
+/* RESET
+   Removes default browser spacing and ensures the page can stretch to full height.
+   Used on: ALL pages
+*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* FULLPAGE UTILITY
+   Makes an image fill the entire screen (full width and height).
+   Used on: index.html and about.html for the background image.
+*/
+.fullpage {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;   /* scales the image without distortion */
+    display: block;      /* removes small gaps under images */
+}
+
+/* NAVIGATION CONTAINER
+   Positions the navigation buttons in the top-left corner.
+   Uses flexbox to space the buttons evenly.
+   Used on: ALL pages
+*/
+.nav-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* NAVIGATION BUTTONS
+   Styles each navigation link as a rounded button.
+   Includes hover effects for interactivity.
+   Used on: ALL pages
+*/
+.nav-box {
+    background-color: rgba(40, 60, 80, 0.85);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;   /* smooth hover animation */
+}
+
+.nav-box:hover {
+    background-color: rgba(60, 90, 120, 0.95);
+    transform: scale(1.05);         /* slight zoom on hover */
+}
+
+/* ABOUT PAGE TEXT BOX
+   Creates the semi-transparent text box on the About page.
+   Positioned lower on the screen so it doesn't overlap the nav.
+   Used on: about.html only
+*/
+.bottom-text {
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    width: 300px;
+    background-color: rgba(45, 55, 75, 0.75);
+    color: white;
+    padding: 18px 22px;
+    border-radius: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.35;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(3px);     /* frosted glass effect */
+}
+
+/* TEAM PAGE HEADER
+   Controls the height of the large SES banner image.
+   Prevents cropping by giving the image enough vertical space.
+   Used on: team.html only
+*/
+.team-header {
+    height: 50vh;          /* half the screen height */
+    width: 100%;
+    overflow: hidden;      /* hides anything outside the container */
+    margin: 0;
+    padding: 0;
+}
+
+/* TEAM HEADER IMAGE
+   Makes the banner image fill the header container.
+   object-position moves the image downward so the logo is visible.
+   Used on: team.html only
+*/
+.team-header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;          /* fills the container without distortion */
+    object-position: center bottom;   /* shifts image DOWN */
+    display: block;             /* removes small gaps */
+}
+
+/* TEAM PAGE BODY
+   Creates the blue background area under the header.
+   Expands to fit the full height of the content.
+   Used on: team.html only
+*/
+.team-body {
+    background-color: #2d374b;
+    width: 100%;
+    min-height: 100vh;     /* ensures full-page height */
+    padding-bottom: 60px;
+    margin: 0;
+    padding-top: 0;
+}
+
+/* TEAM CONTENT BOX
+   The semi-transparent box that holds the table and title.
+   Similar style to the About page text box but larger.
+   Used on: team.html only
+*/
+.team-content {
+    margin: 40px 20px;
+    width: calc(100% - 40px);   /* full width minus side margins */
+    max-width: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 20px 22px;
+    border-radius: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.35;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(3px);
+}
+
+/* TEAM TABLE
+   Styles the financial table: spacing, colors, borders.
+   Used on: team.html only
+*/
+.team-table {
+    width: 100%;
+    border-collapse: collapse;   /* removes gaps between cells */
+    color: white;
+    font-size: 16px;
+}
+
+/* TABLE CELLS
+   Adds spacing and a faint bottom border to each row.
+   Used on: team.html only
+*/
+.team-table th, .team-table td {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 10px 8px;
+    text-align: left;
+}
+
+/* TABLE HEADER ROW
+   Makes the header row bold and slightly larger.
+   Used on: team.html only
+*/
+.team-table th {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* TABLE ROW HOVER EFFECT
+   Highlights a row when the user hovers over it.
+   Used on: team.html only
+*/
+.team-table tr:hover {
+    background-color: rgba(255,255,255,0.1);
+}
