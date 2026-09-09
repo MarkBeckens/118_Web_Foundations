@@ -1,0 +1,3 @@
+# Week 4 Reflection
+
+JavaScript felt very different from HTML and CSS because it focuses on logic and behavior instead of layout and styling. The interesting part is how similar it is to the simple Python programs I wrote on Monday — using variables, functions, and conditions to control the flow of a program. Seeing the output in the console made the connection between the two languages clear and helped everything come back to me.
