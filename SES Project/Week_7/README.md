@@ -11,5 +11,7 @@ I noticed the nav links were only being highlighted manually, and only team.html
 
 I also added a small check in initSortableTable() so it just does nothing if a page doesn't have a table, instead of assuming one is always there.
 
+I also fixed the your note from Week 5 about the team page hero image stretching. The image is 1920x450, but the header box was a fixed height (50vh) that didn't match that ratio, so the image got cropped differently depending on screen size. I changed the header to use aspect-ratio so it scales with the image's real proportions instead.
+
 How restructuring changed my understanding:
 Splitting the code into functions made it obvious that the navigation and the table sorting don't depend on each other at all — they're two separate jobs that just happen to live in the same file. Once I saw that, it was easier to give each function one clear responsibility and trust that it would only do that one thing.
