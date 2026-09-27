@@ -7,3 +7,10 @@ This week I connected JavaScript to my web pages and added interactivity. I used
 
 Reflection:  
 Connecting JavaScript to my webpage helped me understand how websites react to user actions. Instead of being static, the page becomes dynamic and changes based on events and logic. It made the relationship between HTML structure and JavaScript behavior much clearer.
+
+---
+
+## Instructor comments:
+- Nicely done!
+- You are ahead of the class - due to your previous experience. And you are profeesionally keeping pace with the class on your project.
+- The only suggestion I have at this point is to consider the "stretching" look of the hero image on your teams page. You may want to explore how to "adjust" the image ht/width based upon the screen size. Or even using different images sizes, etc.
