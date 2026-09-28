@@ -1,0 +1,384 @@
+/* RESET
+   Removes default browser spacing and ensures the page can stretch to full height.
+   Applied to all pages.
+*/
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* FULLPAGE UTILITY
+   Makes an image fill the entire viewport.
+   Used for background images on index.html and about.html.
+*/
+.fullpage {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: block;
+}
+
+/* NAVIGATION CONTAINER
+   Positions navigation links in the top-left corner.
+   Flexbox is used to space the links evenly.
+   Used on all pages.
+*/
+.nav-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+/* NAVIGATION BUTTONS
+   Styles each navigation link as a rounded button.
+   Includes hover effects.
+   Used on all pages.
+*/
+.nav-box {
+    background-color: rgba(40, 60, 80, 0.85);
+    color: white;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+
+.nav-box:hover {
+    background-color: rgba(60, 90, 120, 0.95);
+    transform: scale(1.05);
+}
+
+/* ACTIVE NAVIGATION LINK
+   Highlights whichever nav link matches the current page.
+   Set by initNavigation() in script.js.
+*/
+.nav-box.active {
+    background-color: rgba(255, 204, 0, 0.85);
+    color: #2d374b;
+}
+
+/* ABOUT PAGE TEXT BOX
+   Semi-transparent text box positioned below the navigation.
+   Used on about.html.
+*/
+.bottom-text {
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    width: 300px;
+    background-color: rgba(45, 55, 75, 0.75);
+    color: white;
+    padding: 18px 22px;
+    border-radius: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.35;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(3px);
+}
+
+/* REPORT GENERATOR BOX (About page)
+   Holds the "Create Report" button and its live status text.
+*/
+.report-box {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.25);
+}
+
+.report-question {
+    margin: 0 0 8px 0;
+}
+
+/* REPORT PARAMETER CONTROLS
+   Holds the year dropdown and SES share % dropdown on the About page,
+   stacked so both fields line up with the same size/spacing.
+*/
+.report-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+.report-controls label {
+    color: white;
+    white-space: nowrap;
+    margin-top: 6px;
+}
+
+.report-controls label:first-child {
+    margin-top: 0;
+}
+
+.report-controls select {
+    width: 160px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2d374b;
+    border: none;
+    border-radius: 8px;
+    padding: 4px 6px;
+    font-size: 13px;
+}
+
+/* SHARED REPORT BUTTON STYLE
+   Used by the "Create Report" button (About) and "Regenerate Report" button (Team).
+*/
+.report-btn {
+    background-color: rgba(255, 204, 0, 0.9);
+    color: #2d374b;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.report-btn:hover:not(:disabled) {
+    background-color: rgba(255, 204, 0, 1);
+    transform: scale(1.03);
+}
+
+.report-btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* LIVE STATUS TEXT
+   Updated step-by-step while the report "generates".
+*/
+.report-status {
+    margin: 8px 0 0 0;
+    min-height: 14px;
+    color: #ffcc00;
+    font-style: italic;
+}
+
+/* TEAM PAGE HEADER
+   Scales with the banner image's real ratio (1920x450) instead of a fixed vh height, so it isn't over-cropped at different screen sizes.
+*/
+.team-header {
+    width: 100%;
+    aspect-ratio: 1920 / 450;
+    max-height: 50vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    margin-bottom: -2px;
+}
+
+/* TEAM HEADER IMAGE
+   Ensures the banner image fills the header container.
+   Used on team.html.
+*/
+.team-header-img {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+    position: relative;
+    top: 1px;
+}
+
+/* TEAM PAGE BODY
+   Blue background section below the header.
+   Used on team.html.
+*/
+.team-body {
+    background-color: #2d374b;
+    width: 100%;
+    min-height: 100vh;
+    padding-bottom: 60px;
+    margin: 0;
+    padding-top: 0;
+}
+
+/* TEAM CONTENT BOX
+   Semi-transparent content container for the table and title.
+   Used on team.html.
+*/
+.team-content {
+    margin: 40px 20px;
+    width: calc(100% - 40px);
+    max-width: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 20px 22px;
+    border-radius: 14px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.35;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    backdrop-filter: blur(3px);
+}
+
+/* TEAM HEADING ROW
+   Places the page title and the Regenerate button on one line.
+*/
+.team-heading-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.team-heading-row h1 {
+    margin: 0;
+}
+
+/* REPORT LOADING OVERLAY (Team page)
+   Shown in place of the table while the report is being "generated".
+*/
+.report-loading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 4px;
+    font-style: italic;
+    color: #ffcc00;
+}
+
+/* The [hidden] attribute must win over the display: flex above */
+.report-loading[hidden] {
+    display: none;
+}
+
+/* SPINNER
+   Simple CSS-only loading indicator.
+*/
+.spinner {
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffcc00;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    flex-shrink: 0;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* REPORT COMPLETE MESSAGE
+   Shown briefly once the report has finished generating.
+*/
+.report-result {
+    color: #ffcc00;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+/* TEAM TABLE
+   Styles the financial table.
+   Used on team.html.
+*/
+.team-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+    font-size: 16px;
+}
+
+/* TABLE CELLS
+   Adds spacing and a faint bottom border.
+   Used on team.html.
+*/
+.team-table th, .team-table td {
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    padding: 10px 8px;
+    text-align: left;
+}
+
+/* TABLE HEADER ROW
+   Makes the header row bold and slightly larger.
+   Used on team.html.
+*/
+.team-table th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* TABLE ROW HOVER EFFECT
+   Highlights a row on hover.
+   Used on team.html.
+*/
+.team-table tr:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+/* RESPONSIVE ADJUSTMENTS
+   Layout changes for smaller screens.
+*/
+@media (max-width: 600px) {
+
+    .nav-container {
+        top: 10px;
+        left: 10px;
+        gap: 8px;
+        flex-direction: column;
+    }
+
+    .bottom-text,
+    .team-content {
+        width: calc(100% - 40px);
+        left: 20px;
+        top: auto;
+        margin-top: 120px;
+        font-size: 14px;
+    }
+
+    .team-header {
+        max-height: 35vh;
+    }
+}
+
+/* SORTABLE HEADER BOXES */
+th[data-type] {
+    cursor: pointer;
+    text-align: left;
+}
+
+.th-box {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.2s, color 0.2s;
+    box-sizing: border-box;
+}
+
+th[data-type]:hover .th-box {
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffcc00;
+}
+
+/* PERSISTENT HIGHLIGHT FOR THE ACTIVELY SORTED COLUMN */
+th[data-type].sorted .th-box {
+    background: rgba(255, 204, 0, 0.25);
+    color: #ffcc00;
+}
+
+/* SORT ARROW INSIDE HEADER BOX */
+.sort-arrow {
+    font-size: 12px;
+    margin-left: 4px;
+    color: #ffcc00;
+}
